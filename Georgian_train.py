@@ -1,9 +1,10 @@
 import CG.train as CGT 
 
 def main():
-    CGT.main(["--dataroot", "Dataset\Georgian",
+    CGT.main(["--dataroot", "Dataset/Georgian",
               "--model", "pix2pix",
               "--direction", "BtoA",
+              "--name", "georgian",
               "--verbose",])
     # --gpu_ids = -1
 
