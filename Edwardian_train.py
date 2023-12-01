@@ -5,8 +5,7 @@ def main():
               "--model", "pix2pix",
               "--direction", "BtoA",
               "--name", "edwardian",
-              "--verbose",])
-    # --gpu_ids = -1
+              "--verbose"])
 
 if __name__ == "__main__":
     main()

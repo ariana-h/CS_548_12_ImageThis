@@ -17,3 +17,9 @@ Dataset/Edwardian/A/Train_Aug
 Dataset/Edwardian/A/Train_Copy
 Dataset/Georgian/A/Train_Aug
 Dataset/Georgian/A/Train_Copy
+Dataset/Contemporary/A/Train/0*.jpg
+Dataset/Edwardian/A/Train/0*.jpg
+Dataset/Georgian/A/Train/0*.jpg
+Dataset/Contemporary/B/Train/0*.jpg
+Dataset/Edwardian/B/Train/0*.jpg
+Dataset/Georgian/B/Train/0*.jpg
