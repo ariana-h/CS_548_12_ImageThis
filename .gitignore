@@ -36,3 +36,4 @@ Dataset/Edwardian/B/train/0*.jpg
 Dataset/Georgian/B/train/0*.jpg
 
 checkpoints/
+results/

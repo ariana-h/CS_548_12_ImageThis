@@ -27,7 +27,12 @@ See training and test tips at: https://github.com/junyanz/pytorch-CycleGAN-and-p
 See frequently asked questions at: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/qa.md
 """
 import os
-from options.test_options import TestOptions
+import sys
+sys.path.append("./CG")
+#from options.test_options import TestOptions
+sys.path.append("./CG/options")
+from test_options import TestOptions
+
 from data import create_dataset
 from models import create_model
 from util.visualizer import save_images
@@ -39,8 +44,8 @@ except ImportError:
     print('Warning: wandb package cannot be found. The option "--use_wandb" will result in error.')
 
 
-if __name__ == '__main__':
-    opt = TestOptions().parse()  # get test options
+def main(args):
+    opt = TestOptions().parse(args)  # get test options
     # hard-code some parameters for test
     opt.num_threads = 0   # test code only supports num_threads = 0
     opt.batch_size = 1    # test code only supports batch_size = 1
@@ -78,3 +83,6 @@ if __name__ == '__main__':
             print('processing (%04d)-th image... %s' % (i, img_path))
         save_images(webpage, visuals, img_path, aspect_ratio=opt.aspect_ratio, width=opt.display_winsize, use_wandb=opt.use_wandb)
     webpage.save()  # save the HTML
+
+if __name__ == '__main__':
+    main(sys.argv)
