@@ -1,8 +1,8 @@
 import os
 
-file_paths = ["Dataset/Contemporary/A/Train", "Dataset/Contemporary/B/Train", 
-              "Dataset/Edwardian/A/Train", "Dataset/Edwardian/B/Train", 
-              "Dataset/Georgian/A/Train", "Dataset/Georgian/B/Train"]
+file_paths = ["Dataset/Contemporary/A/train", "Dataset/Contemporary/B/train", 
+              "Dataset/Edwardian/A/train", "Dataset/Edwardian/B/train", 
+              "Dataset/Georgian/A/train", "Dataset/Georgian/B/train"]
 
 for file_path in file_paths:
     files = os.listdir(file_path)

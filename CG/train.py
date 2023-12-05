@@ -21,10 +21,14 @@ See frequently asked questions at: https://github.com/junyanz/pytorch-CycleGAN-a
 import sys
 sys.path.append("./CG")
 import time
-from options.train_options import TrainOptions
 from data import create_dataset
-from models import create_model
 from util.visualizer import Visualizer
+#from options.train_options import TrainOptions
+sys.path.append("./CG/options")
+from train_options import TrainOptions
+
+from models import create_model
+
 import os
 
 

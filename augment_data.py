@@ -28,7 +28,7 @@ def augment_and_change_color(input_folder, output_folder, target_color):
         
     os.makedirs(output_folder) 
 
-    for root, _, files in os.walk(os.path.join(input_folder, 'A', 'Train')): 
+    for root, _, files in os.walk(os.path.join(input_folder, 'A', 'train')): 
         for file in files: 
             if file.lower().endswith(('.png', '.jpg', '.jpeg')): 
                 input_path = os.path.join(root, file) 
@@ -44,13 +44,13 @@ if __name__ == "__main__":
     input_folders = ["Dataset/Contemporary/", "Dataset/Edwardian", "Dataset/Georgian"]
     
     for input_folder in input_folders:
-        copied_folder = os.path.join(input_folder, 'A', 'Train_Copy')
+        copied_folder = os.path.join(input_folder, 'A', 'train_copy')
         
         if not os.path.exists(copied_folder):
             #os.makedirs(copied_folder) 
-            shutil.copytree(os.path.join(input_folder, 'A', 'Train'), copied_folder) 
+            shutil.copytree(os.path.join(input_folder, 'A', 'train'), copied_folder) 
         
-        output_folder = os.path.join(input_folder, 'A', 'Train_Aug')
+        output_folder = os.path.join(input_folder, 'A', 'train_aug')
         target_color = (30, 50, 20)  # Example target color in HSV format 
 
         augment_and_change_color(input_folder, output_folder, target_color) 

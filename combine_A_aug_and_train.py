@@ -42,8 +42,8 @@ def double_images(train, destination_folder):
 if __name__ == "__main__": 
     train_paths = ["Dataset/Contemporary/", "Dataset/Edwardian/", "Dataset/Georgian/"]
     for input in train_paths:
-        train_aug = os.path.join(input, 'A', 'Train_Aug')
-        destination_folder = os.path.join(input, 'A', 'Train')
+        train_aug = os.path.join(input, 'A', 'train_aug')
+        destination_folder = os.path.join(input, 'A', 'train')
 
         # Add a 0 before each filename in Train_Aug/ 
         for root, _, files in os.walk(train_aug): 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         combine_folders(train_aug, destination_folder) 
                 
                 
-        train = os.path.join(input, 'B', 'Train')
+        train = os.path.join(input, 'B', 'train')
         destination_folder = train
   
         double_images(train, destination_folder) 
