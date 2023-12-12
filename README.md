@@ -172,8 +172,8 @@ An example of the outputs for each model is shown below with the generated image
 The original dataset that was used for CycleGAN was taken from: https://www.kaggle.com/datasets/balraj98/facades-dataset but it has to be modified for Pix2Pix.
 
 **To obtain and modify the dataset:**
-1. Download the dataset from https://www.kaggle.com/datasets/balraj98/facades-dataset
-2. It will download as archive.zip
+1. Download the dataset from https://www.kaggle.com/datasets/balraj98/facades-dataset.
+2. It will download as `archive.zip`.
 3. Unzip the file to a folder in your repository.
 4. Copy the relative path of the unzipped folder.
 5. Paste the path for the `original_path` variable under main in the `arrange_data.py` script in scripts.
