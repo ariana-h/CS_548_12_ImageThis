@@ -82,6 +82,8 @@ split = train_copy, number of images = 0
 ## Models
 Use the CG folder in this repository to access the necessary models. This project uses the pix2pix model.
 
+Checkpoints and resulting images from each of the models can be downloaded from OneDrive using the following link: https://sunypoly-my.sharepoint.com/:f:/g/personal/huhkoa2_sunypoly_edu/EoU1MC9Mjo1Ho4pvX9t2R2QBfu_POXRr4kIiZO5CooiPoA?e=ZWTKMJ
+
 ## Software Dependencies
 • Linux
 
@@ -94,11 +96,29 @@ Use the CG folder in this repository to access the necessary models. This projec
 ## Running the Project
 Clone this repo using `git clone git@github.com:ariana-h/CS_548_12_ImageThis.git`
 
+### Running the scripts
+As a recap, run these scripts in order:
+
+`python augment_data.py`
+
+`python combine_A_aug_and_train.py`
+
+Then use the command line to run:
+
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Contemporary/A --fold_B Dataset/Contemporary/B --fold_AB Dataset/Contemporary`
+
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Edwardian/A --fold_B Dataset/Edwardian/B --fold_AB Dataset/Edwardian`
+
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Georgian/A --fold_B Dataset/Georgian/B --fold_AB Dataset/Georgian`
+
+
 ### Train the model(s)
 Run the train scripts for each corresponding architecture style. These scripts provide arguments to the Pix2Pix model located in the CG directory, and will create checkpoints to resume training if necessary. The output of the training scripts should include the epoch number, the amount of time it took per epoch, and the losses.
 
 `python Contemporary_train.py`
+
 `python Edwardian_train.py`
+
 `python Georgian_train.py`
 
 #### Output: 
@@ -127,8 +147,11 @@ learning rate 0.0002000 -> 0.0002000
 
 ### Test the model(s)
 Run the evaluate script for each corresponding architecture style. These scripts provide arguments to the Pix2Pix model located in the CG directory. The resulting images will be shown in a new folder named results.
+
 `python Contemporary_evaluate.py`
+
 `python Edwardian_evaluate.py`
+
 `python Georgian_evaluate.py`
 
 An example of the outputs for each model is shown below with the generated images, the real segmentation label, and the real building facade:
