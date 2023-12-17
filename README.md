@@ -43,7 +43,7 @@ To concatenate the A and B images to match the model requirements, use the follo
 
 
 #### In a bash terminal run:
-`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Contemporary/A --fold_B Dataset/Contemporary/B --fold_AB Dataset/Contemporary`
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Contemporary/A --fold_B Dataset/Contemporary/B --fold_AB Dataset/Contemporary --no_multiprocessing`
 
 #### Output would show: 
 >[fold_A] =  Dataset/Contemporary/A
@@ -74,9 +74,9 @@ split = train_copy, number of images = 0
 
 
 #### Run these commands to combine the other two datasets:
-`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Edwardian/A --fold_B Dataset/Edwardian/B --fold_AB Dataset/Edwardian`
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Edwardian/A --fold_B Dataset/Edwardian/B --fold_AB Dataset/Edwardian --no_multiprocessing`
 
-`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Georgian/A --fold_B Dataset/Georgian/B --fold_AB Dataset/Georgian`
+`python CG/datasets/combine_A_and_B.py --fold_A Dataset/Georgian/A --fold_B Dataset/Georgian/B --fold_AB Dataset/Georgian --no_multiprocessing`
 
 
 ## Models
