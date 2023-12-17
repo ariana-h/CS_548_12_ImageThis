@@ -37,3 +37,5 @@ Dataset/Georgian/B/train/0*.jpg
 
 checkpoints/
 results/
+
+*.zip
